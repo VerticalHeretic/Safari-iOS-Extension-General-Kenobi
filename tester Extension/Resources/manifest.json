@@ -21,7 +21,7 @@
 
     "content_scripts": [{
         "js": [ "content.js" ],
-        "matches": [ "*://example.com/*" ]
+        "matches": ["*://*.reddit.com/*"]
     }],
 
     "browser_action": {
@@ -34,5 +34,8 @@
         }
     },
 
-    "permissions": [ ]
+    "permissions": [
+        "nativeMessaging",
+        "storage",
+        "tabs"]
 }

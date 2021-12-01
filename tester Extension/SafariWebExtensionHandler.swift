@@ -16,7 +16,7 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
         os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@", message as! CVarArg)
 
         let response = NSExtensionItem()
-        response.userInfo = [ SFExtensionMessageKey: [ "Response to": message ] ]
+        response.userInfo = [ SFExtensionMessageKey: [ "answer": "general kenobi" ] ]
 
         context.completeRequest(returningItems: [response], completionHandler: nil)
     }
